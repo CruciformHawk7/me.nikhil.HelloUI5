@@ -1,0 +1,12 @@
+<mvc:View controllerName="me.nikhil.HelloUI5.controller.NorthwindProducts" displayBlock="true" xmlns="sap.m"
+          xmlns:mvc="sap.ui.core.mvc">
+  <Page title="{i18n>north}" id="NorthwindProducts" showNavButton="true" navButtonPress="goHome">
+    <content>
+      <List id="invoiceList" class="sapUiResponsiveMargin" width="auto" items="{invoice>Invoices}">
+        <items>
+          <ObjectListItem title="{invoice>Quantity} X {invoice>ProductName}" id="items"></ObjectListItem>
+        </items>
+      </List>
+    </content>
+  </Page>
+</mvc:View>

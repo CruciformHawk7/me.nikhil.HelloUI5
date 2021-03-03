@@ -1,0 +1,37 @@
+<mvc:View controllerName="me.nikhil.HelloUI5.controller.PowerDetails" displayBlock="true"
+          xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:viz="sap.viz.ui5.controls"
+          xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+          xmlns:viz.data="sap.viz.ui5.data">
+  <Page id="PowerDetails">
+    <customHeader>
+      <Toolbar>
+        <Button icon="sap-icon://nav-back" press="goBack" />
+        <Button icon="sap-icon://home" press="goHome" />
+        <!-- <Text text="{=${/location} === 'All' ? ${i18n>detailsAll} : {${i18n>details} {/location} }}"
+                   class="largeText"/>-->
+        <Text text="{i18n>details} {/location}" class="largeText"
+              visible="{= ${/location} !== 'All'}"/>
+        <Text text="{i18n>detailsAll}" class="largeText"
+              visible="{= ${/location} === 'All'}"/>
+      </Toolbar>
+    </customHeader>
+    <FlexBox direction="Row">
+      <viz:VizFrame id="chartViz" uiConfig="{applicationSet: 'fiori'}" vizType="bar">
+        <viz:dataset>
+          <viz.data:FlattenedDataset data="{/data}">
+            <viz.data:dimensions>
+              <viz.data:DimensionDefintion name="Time" value="{Date}" />
+            </viz.data:dimensions>
+            <viz.data:measures>
+              <viz.data:MeasureDefinition name="Units" value="{UnitsConsumed}" />
+            </viz.data:measures>
+          </viz.data:FlattenedDataset>
+        </viz:dataset>
+        <viz:feeds>
+          <viz.feeds:FeedItem id="valueAxisFeed" uid="valueAxis" type="Measure" values="Units"/>
+          <viz.feeds:FeedItem id="timeAxisFeed" uid="timeAxis" type="Dimension" value="Time"/>
+        </viz:feeds>
+      </viz:VizFrame>
+    </FlexBox>
+  </Page>
+</mvc:View>

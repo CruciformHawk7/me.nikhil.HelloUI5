@@ -1,0 +1,16 @@
+{
+  "generator-easy-ui5": {
+    "projectname": "HelloUI5",
+    "namespace": "me.nikhil",
+    "platform": "Static webserver",
+    "viewtype": "XML",
+    "viewname": "MainView",
+    "ui5libs": "Content delivery network (OpenUI5)",
+    "newdir": true,
+    "namespaceURI": "me/nikhil",
+    "uimodules": [
+      "uimodule"
+    ],
+    "setupCompleted": true
+  }
+}

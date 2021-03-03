@@ -1,0 +1,29 @@
+<mvc:View controllerName="me.nikhil.HelloUI5.controller.MainView" displayBlock="true" xmlns="sap.m"
+          xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml">
+  <Shell id="parentShell">
+    <App id="idAppControl">
+      <pages>
+        <Page title="{i18n>title}" id="Homepage">
+          <html:div class="img-contain">
+            <Image src="resources/img/screen-mockup.jpg" id="hero-img" backgroundSize="contain" class="contain"/>
+            <html:h1 class="center-center">Welcome to my OpenUI5 tests!</html:h1>
+          </html:div>
+          <Panel id="linksPane" class="sapUiSmallMarginTop" headerText="{i18n>samples}">
+            <content>
+              <FlexBox id="homeFlex">
+                <items>
+                  <Button id="count" text="{i18n>counter}" press="pressedCount" icon="sap-icon://sort"
+                          class="sapUiSmallMarginBegin"/>
+                  <Button id="north" text="{i18n>north}" press="pressedNorth" icon="sap-icon://product"
+                          class="sapUiSmallMarginBegin"/>
+                  <Button id="power" text="{i18n>power}" press="pressedPower" icon="sap-icon://sys-monitor"
+                          class="sapUiSmallMarginBegin"/>
+                </items>
+              </FlexBox>
+            </content>
+          </Panel>
+        </Page>
+      </pages>
+    </App>
+  </Shell>
+</mvc:View>

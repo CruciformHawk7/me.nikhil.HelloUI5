@@ -1,0 +1,38 @@
+/* Enter your custom styles here */
+
+.end:nth-last-child(0) {
+  align-self: flex-end;
+}
+
+.largeText {
+  font-size: large;
+}
+
+.medText {
+  font-size: medium;
+}
+
+.contain {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: blur(4px);
+}
+
+.img-contain {
+  position: relative;
+  width: 100%;
+  height: 60%;
+}
+
+.center-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 36pt;
+  text-align: center;
+}

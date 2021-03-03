@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Dialog id="deleteCounter" title="{i18n>delDiag} {counterValue>/counterName}?" icon="sap-icon://delete"
+          showHeader="true">
+    <content>
+      <Label id="confirmation" text="{i18n>confDelete}" class="medText sapUiSmallMarginBegin sapUiSmallMarginEnd"/>
+    </content>
+    <buttons>
+      <Button text="{i18n>delConfirm}" press="onConfDel" id="delConfirm" class="sapUiSmallMarginBegin" type="Reject"
+              icon="sap-icon://accept"/>
+      <Button text="{i18n>cancel}" press="onCloseDel" id="delCancel" class="sapUiSmallMarginBegin" type="Accept"
+              icon="sap-icon://decline"/>
+    </buttons>
+  </Dialog>
+</core:FragmentDefinition>

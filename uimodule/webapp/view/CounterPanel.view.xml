@@ -1,0 +1,37 @@
+<mvc:View controllerName="me.nikhil.HelloUI5.controller.CounterPanel" displayBlock="true" xmlns="sap.m"
+          xmlns:mvc="sap.ui.core.mvc">
+  <Panel headerText="{i18n>CounterPanelHeader} {counterValue>/counterName}" class="sapUiResponsiveMargin"
+         id="counterPane" width="auto">
+    <headerToolbar>
+      <Toolbar id="toolbar">
+        <FlexBox id="toolbar-main" width="100%" alignItems="Center">
+          <Text class="largeText" text="{i18n>CounterPanelHeader} {counterValue>/counterName}" id="Text"/>
+          <FlexBox id="toolbar-box" justifyContent="End">
+            <layoutData>
+              <FlexItemData growFactor='1' id="flexData"/>
+            </layoutData>
+            <items>
+              <Button id="cp" press="onCopyPress" icon="sap-icon://copy" type="Default" text="{i18n>copyButton}"/>
+              <Button id="ren" press="showRenameDialog" text="{i18n>renameButton}" icon="sap-icon://edit"
+                      type="Emphasized" class="sapUiTinyMarginBegin"/>
+              <Button id="del" press="onDelete" text="{i18n>deleteButton}" icon="sap-icon://delete" type="Reject"
+                      class="sapUiTinyMarginBegin"/>
+            </items>
+          </FlexBox>
+        </FlexBox>
+      </Toolbar>
+    </headerToolbar>
+    <content>
+      <FlexBox id="innerContainerFlex" class="end">
+        <items>
+          <Button id="dec" press="decrement" icon="sap-icon://less" class="sapUiSmallMarginBegin"></Button>
+          <Input id="txt" value="{counterValue>/number}" width="100px" type="Number"/>
+          <Button id="inc" press="increment" icon="sap-icon://add"/>
+          <Label id="lbl" text="{i18n>factor}" labelFor="stepNumber"
+                 class="sapUiSmallMarginBegin medText sapUiTinyMarginTop"/>
+          <StepInput id="stepNumber" width="100px" value="{counterValue>/factor}" class="sapUiTinyMarginBegin"/>
+        </items>
+      </FlexBox>
+    </content>
+  </Panel>
+</mvc:View>

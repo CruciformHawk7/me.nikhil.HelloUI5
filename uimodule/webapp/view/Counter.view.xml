@@ -1,0 +1,23 @@
+<mvc:View controllerName="me.nikhil.HelloUI5.controller.Counter" displayBlock="true" xmlns="sap.m"
+          xmlns:mvc="sap.ui.core.mvc">
+  <Page id="Counter" title="{i18n>counter}" showNavButton="true" navButtonPress="goHome">
+    <content>
+      <!-- Counters Container -->
+      <FlexBox id="panels" wrap="Wrap" direction="Column">
+        <items>
+          <!-- Counter Panel -->
+          <mvc:XMLView viewName="me.nikhil.HelloUI5.view.CounterPanel" id="fragment-1"/>
+        </items>
+      </FlexBox>
+      <!-- End Container -->
+      <!-- Add Button Container -->
+      <FlexBox class="sapUiResponsiveMargin" width="auto" id="addCountersPanel" alignItems="Center"
+               justifyContent="Center">
+        <items>
+          <Button id="addCounter" press="onAddCounter" icon="sap-icon://add" text="Add Counter"
+                  class="center-self"></Button>
+        </items>
+      </FlexBox>
+    </content>
+  </Page>
+</mvc:View>

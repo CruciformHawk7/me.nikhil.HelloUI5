@@ -1,0 +1,10 @@
+<mvc:View controllerName="me.nikhil.HelloUI5.controller.PowerData" displayBlock="true"
+          xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+  <Page id="PowerMonitor" title="{i18n>power}" showNavButton="true" navButtonPress="goHome">
+    <List id="locations" items="{path: 'locations>/locs'}" busy="true" headerText="{i18n>locationHead}">
+      <items>
+        <StandardListItem id="location-entry" title="{locations>Place}" type="Navigation" press="navigateToLoc"/>
+      </items>
+    </List>
+  </Page>
+</mvc:View>
